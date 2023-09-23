@@ -1,0 +1,23 @@
+Challenges you faced
+
+1. Connecting the Django application to the MongoDB instance.
+
+- This effort took some time to complete, however disabling authorization in the mongod.conf file really helped expedite the process. This is definitely is an unsecure way of running and configuring a database.
+
+To make this connection more secure, you would want to authenticate the connection path using secrets.
+
+Create a managed Kubernetes Cluster within the same network as the VM you created.
+
+- This was different because outside of performing the steps required to create an EKS cluster, I had never run an application on EKS or Kubernetes in general. Becoming familiar with the Kubernetes architecture, workflow and terminology took a little bit of time, however I was able to manage what I would consider the basics throughout this technical assessment.
+
+Getting the networking configuration correct so that the Django application in the private subnet could work with the MongoDB VM and be publicly accessible.
+
+- Here is a piece of documentation that is a solid resource for checking network connectivity: https://repost.aws/knowledge-center/elb-connectivity-troubleshooting . I also used AWS Network Reachability Analyzer for troubleshooting while following networking best practices with EKS, NAT Gateway, Subnets, NACLs, Route Tables and more.
+
+Creating a Terraform deployment of my configuration, with a technology (K8s) I didn’t have a lot of background in before this technical assessment.
+
+- Work in Progress.
+
+Getting the application to work and be recognized in AZ-B (not required according to the documentation, but needed to figure out why).
+
+- Within the Load Balancer that gets created from the EKS Service, there are settings within the 'Instance' tab that allow you to choose Availability Zones. If the AZ and subnet is not selected within the EKS Load Balancer, the application will not load if the node is provisioned in AZ B.
