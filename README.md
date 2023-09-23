@@ -95,7 +95,7 @@ Use the following AWS policy to allow anyone to access the bucket and it's objec
         ]
     }
 
-This policy grants read access to anyone for objects within the defined bucket. This policy will make all objects in the bucket publicly accessible, which means anyone that has the object's URL can read it's contents. Additionally, there are permissions set to allow AWS Inspector Vulnerability Scans to be exported within the 'securityfindings/' folder path. I would love to compare what AWS finds as vulnerabilities within the HELLO ALHAJI!
+This policy grants read access to anyone for objects within the defined bucket. This policy will make all objects in the bucket publicly accessible, which means anyone that has the object's URL can read it's contents. Additionally, there are permissions set to allow AWS Inspector Vulnerability Scans to be exported within the 'securityfindings/' folder path. I would love to compare what AWS finds as vulnerabilities within the HELLO ALHAJI! BLAH BLAH BLAH
 
 Security Concerns  
 
